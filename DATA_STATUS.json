@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "lookout-private-data-preview-v1",
+  "sourceArchiveSnapshot": "2026-11-15",
+  "viewerVersion": "v4.10.7",
+  "dataMode": "full_local_snapshot",
+  "sampleCameraCount": 622,
+  "sampleHistoryReferences": 5113750,
+  "sampleStills": 40694,
+  "sampleDatedClips": 58,
+  "fullCatalogRecords": 622,
+  "fullArchiveReferencesReported": 5113750,
+  "fullArchiveShardsNotBundled": 0,
+  "hpwrenSampleEvents": 4,
+  "hpwrenLeadEvents": 217,
+  "uafVideoLeads": 3011,
+  "rights": "PRIVATE ONLY. Review provider data rights before publication.",
+  "archiveReadOnly": "complete archive remains only on owner PC",
+  "metadataBytes": 504919500
+}

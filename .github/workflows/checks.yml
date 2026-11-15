@@ -1,0 +1,23 @@
+name: Source and staged-metadata checks (no provider requests)
+on:
+  push:
+  pull_request:
+jobs:
+  syntax-and-safety:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Viewer syntax, tracked data, and private-file safety
+        run: python3 tests/preflight.py
+      - name: Sample/full metadata consistency
+        run: python3 tests/data_integrity.py
+      - name: Local-player scheduling and export regressions
+        run: node tests/frameplayer_regressions.cjs index.html
+      - name: Large historical shard (40,600 frames, offline)
+        run: node tests/history_large_shard.cjs index.html history-data/history-shards/6e0846a782c9400814072e63.json
